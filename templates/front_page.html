@@ -2,17 +2,14 @@
 
 {% block content %}
 
-{% if posts.length > 0  %}
-    {% for post in posts %}
-    <div class="post">
-        <hr>
-        <div class="post-title">{{post.title}}</div>
-        <pre class="post-body">{{post.body}}</pre>
-        <div class="post-author">{{post.author}}</div>
-        <!-- <div class="post-datetime">{{post.created}}</div> -->
-    </div>
-    {% endfor%}
-{% else %}
-    <h2>No Blog Posts</h2>
-{% endif %}
+{% for post in posts %}
+<div class="post">
+    <hr>
+    <div class="post-title">{{post.title}}</div>
+    <pre class="post-body">{{post.body}}</pre>
+    <div class="post-author">{{post.author}}</div>
+    <!-- <div class="post-datetime">{{post.created}}</div> -->
+</div>
+{% endfor%}
+
 {% endblock %}
